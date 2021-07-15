@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "FizzBuzz"
+version = "0.1.0"
+description = ""
+authors = ["Viktorija Buklajeva <viktorija.buklajeva@zoopla.co.uk>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+black = "^21.6b0"
+mypy = "^0.910"
+flake8 = "^3.9.2"
+click = "^8.0.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
