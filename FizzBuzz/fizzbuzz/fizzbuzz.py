@@ -1,17 +1,18 @@
-def fizzbuzz(number):
-    answer = []
+def fizzbuzz(start, end):
+    def int_to_fizzbuzz(i):
+        entry = ''
+        if i%3 == 0:
+            entry += "fizz"
+        if i%5 == 0:
+            entry += "buzz"
+        if i%3 != 0 and i%5 != 0:
+            entry = i
+        return entry
 
-    for current_number in range(1, number + 1):
-        if current_number % 3 == 0:
-            answer.append("Fizz")
-        elif current_number % 5 == 0:
-            answer.append("Buzz")
-        elif current_number % 3 == 0 and current_number % 5 == 0:
-            answer.append("FizzBuzz")
-        else:
-            answer.append(f"{current_number}")
+    return [int_to_fizzbuzz(i) for i in range(start, end+1)]
 
-    return answer
-
-
-print(fizzbuzz(15))
+if __name__ == "__main__":
+    start = int(input("Start Value:"))
+    end = int(input("End Value:"))
+    for i in fizzbuzz(start, end):
+        print(i)
